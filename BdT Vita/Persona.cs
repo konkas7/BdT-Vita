@@ -93,7 +93,7 @@ namespace BdT_Vita
         [JsonProperty]
         public List<Prestazione> Prestazioni { get; set; } // Elenco delle prestazioni offerte o ricevute dal socio
 
-        public Socio(string cognome, string nome, double telefono, int debito, bool segreteria)
+        public Persona(string cognome, string nome, double telefono, int debito, bool segreteria)
         {
             Cognome = cognome;
             Nome = nome;
@@ -102,7 +102,7 @@ namespace BdT_Vita
             Segreteria = segreteria;
             Prestazioni = new List<Prestazione>();
         }
-        public Socio()
+        public Persona()
         {
             Cognome = "NoData";
             Nome = "NoData";
@@ -125,11 +125,11 @@ namespace BdT_Vita
 
             foreach (Prestazione prestazione in Prestazioni)
             {
-                if (prestazione.Erogatore.Equals(this))
+                if (prestazione.Giver.Equals(this))
                 {
                     oreErogate += prestazione.Ore;
                 }
-                else if (prestazione.Ricevente.Equals(this))
+                else if (prestazione.Reciver.Equals(this))
                 {
                     oreRicevute += prestazione.Ore;
                 }
@@ -139,15 +139,15 @@ namespace BdT_Vita
             return this.Debito;
         }
 
-        protected Socio(Socio other) : this(other.Cognome, other.Nome, other.Telefono, other.Debito, other.Segreteria)
+        protected Persona(Persona other) : this(other.Cognome, other.Nome, other.Telefono, other.Debito, other.Segreteria)
         {
 
         }
-        public Socio Clone()
+        public Persona Clone()
         {
-            return new Socio(this);
+            return new Persona(this);
         }
-        public bool Equals(Socio u)
+        public bool Equals(Persona u)
         {
             if (u == null) return false;
 
@@ -158,7 +158,7 @@ namespace BdT_Vita
 
         public override string ToString()
         {
-            return $"Socio: {Cognome} {Nome}; {Telefono}, {Debito}";
+            return $"Persona: {Cognome} {Nome}; {Telefono}, {Debito}";
         }
     }
 }
