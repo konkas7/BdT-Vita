@@ -156,5 +156,11 @@ namespace BdT_Vita
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddPersonaS nuovaForm = new AddPersonaS();
+            nuovaForm.Show();
+        }
     }
 }
