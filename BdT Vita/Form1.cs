@@ -30,17 +30,17 @@ namespace BdT_Vita
             CaricamentoDati();
 
             /*
-            Persona persona1 = new Persona("Vita", "Thomas", 1111111111, 1, false);
+            Persona persona1 = new Persona("Vita", "Thomas", 1111111111, 2, false);
             Persona persona2 = new Persona("Valceschini", "Paolo", 2222222222, 2, true);
-            Persona persona3 = new Persona("Pavoni", "Andrea", 3333333333, 3, true);
+            Persona persona3 = new Persona("Pavoni", "Andrea", 3333333333, 2, true);
 
             persone.Add(persona1);
             persone.Add(persona2);
             persone.Add(persona3);
 
-            Prestazione prestazione1 = new Prestazione("1", persona1, persona2, 5, DateTime.Now, "Pulizia");
-            Prestazione prestazione2 = new Prestazione("2", persona2, persona3, 8, DateTime.Now, "Giardinaggio");
-            Prestazione prestazione3 = new Prestazione("3", persona3, persona1, 3, DateTime.Now, "DogSitting");
+            Prestazione prestazione1 = new Prestazione("1", persona1, persona2, 6, DateTime.Now, "Pulizia");
+            Prestazione prestazione2 = new Prestazione("2", persona2, persona3, 4, DateTime.Now, "Giardinaggio");
+            Prestazione prestazione3 = new Prestazione("3", persona3, persona1, 2, DateTime.Now, "DogSitting");
 
             prestazioni.Add(prestazione1);
             prestazioni.Add(prestazione2);
@@ -50,6 +50,7 @@ namespace BdT_Vita
 
             SalvataggioDati();
             Aggiornamento();
+
         }
 
         private void CaricamentoDati()
@@ -147,6 +148,11 @@ namespace BdT_Vita
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListaDebiti_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -93,6 +93,7 @@
             this.ListaDebiti.Name = "ListaDebiti";
             this.ListaDebiti.Size = new System.Drawing.Size(480, 100);
             this.ListaDebiti.TabIndex = 6;
+            this.ListaDebiti.SelectedIndexChanged += new System.EventHandler(this.ListaDebiti_SelectedIndexChanged);
             // 
             // ListaPersone
             // 
