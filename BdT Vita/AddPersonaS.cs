@@ -29,17 +29,18 @@ namespace BdT_Vita
             string cognome = textBox2.Text;
             double telefono = double.Parse(textBox3.Text);
             int debito = int.Parse(textBox4.Text);
+            string input = textBox5.Text.ToLower(); // Leggi il testo dalla TextBox e convertilo in minuscolo
             bool segreteria;
-            if (textBox5.Text == "true")
+            if (bool.TryParse(input, out segreteria))
             {
-                segreteria = true;
-            }
-            if (textBox5.Text == "false")
-            {
-                segreteria = false;
+                // La conversione è riuscita, ora puoi usare valoreBool che è un bool
+                //Console.WriteLine($"Valore booleano inserito: {segreteria}");
             }
             else
-                throw new Exception("Risposta non valida");
+            {
+                // La conversione non è riuscita, gestisci l'input non valido
+                throw new Exception("Input non valido. Inserisci 'true' o 'false'.");
+            }
 
 
 
@@ -47,6 +48,10 @@ namespace BdT_Vita
             
             // Chiudi il modulo di inserimento
             this.Close();
+
+            // Apri Form1 passando nuovaPersona al costruttore
+            Form1 form1 = new Form1(nuovaPersona);
+            form1.Show();
         }
     }
 }

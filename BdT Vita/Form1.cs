@@ -165,6 +165,21 @@ namespace BdT_Vita
             AddPersonaS nuovaForm = new AddPersonaS();
             
             nuovaForm.Show();
+            this.Close();
+            persone.Add(nuovaPersona);
+
+            Form1_Load(null, null);
+            
         }
+
+        private Persona nuovaPersona;
+
+        public Form1(Persona nuovaPersona) : this()
+        {
+            this.nuovaPersona = nuovaPersona;
+            // Ora puoi usare nuovaPersona in questa form
+        }
+
+        
     }
 }
