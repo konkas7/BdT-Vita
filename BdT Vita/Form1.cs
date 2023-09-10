@@ -29,7 +29,7 @@ namespace BdT_Vita
         {
             CaricamentoDati();
 
-            // Aggiungi tre nuove persone
+            /*
             Persona persona1 = new Persona("Vita", "Thomas", 1111111111, 1, false);
             Persona persona2 = new Persona("Valceschini", "Paolo", 2222222222, 2, true);
             Persona persona3 = new Persona("Pavoni", "Andrea", 3333333333, 3, true);
@@ -38,7 +38,6 @@ namespace BdT_Vita
             persone.Add(persona2);
             persone.Add(persona3);
 
-            // Aggiungi tre nuove prestazioni
             Prestazione prestazione1 = new Prestazione("1", persona1, persona2, 5, DateTime.Now, "Pulizia");
             Prestazione prestazione2 = new Prestazione("2", persona2, persona3, 8, DateTime.Now, "Giardinaggio");
             Prestazione prestazione3 = new Prestazione("3", persona3, persona1, 3, DateTime.Now, "DogSitting");
@@ -46,6 +45,7 @@ namespace BdT_Vita
             prestazioni.Add(prestazione1);
             prestazioni.Add(prestazione2);
             prestazioni.Add(prestazione3);
+            */
 
 
             SalvataggioDati();
@@ -137,12 +137,12 @@ namespace BdT_Vita
 
         private void btnDebito_Click_1(object sender, EventArgs e)
         {
-            List<Persona> debitori = persone.Where(s => s.CalcolaDebito() > 0).ToList();
+            List<Persona> givers = persone.Where(s => s.CalcolaDebito() > 0).ToList();
 
             ListaDebiti.Items.Clear();
-            foreach (Persona debitor in debitori)
+            foreach (Persona giver in givers)
             {
-                ListaDebiti.Items.Add($"{debitor.Cognome}, {debitor.Nome} | Debito: {debitor.Debito}");
+                ListaDebiti.Items.Add($"{giver.Cognome}, {giver.Nome} | Debito: {giver.Debito}");
             }
         }
 
