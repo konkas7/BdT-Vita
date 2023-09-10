@@ -91,7 +91,7 @@ namespace BdT_Vita
             File.WriteAllText("prestazioni.json", prestazioniJson);
         }
 
-        private void Aggiornamento()
+        public void Aggiornamento()
         {
             ListaPersone.Items.Clear();
             foreach (Persona persona in persone)
@@ -99,8 +99,11 @@ namespace BdT_Vita
                 ListaPersone.Items.Add($"{persona.Cognome}, {persona.Nome} - Tel: {persona.Telefono}");
             }
         }
+        public void AggiungiElementoAllaLista(List<Persona> persone, Persona nuovaPersona)
+        {
+            persone.Add(nuovaPersona);
+        }
 
-        
 
         private void btnReload_Click(object sender, EventArgs e)
         {
@@ -160,6 +163,7 @@ namespace BdT_Vita
         private void button1_Click(object sender, EventArgs e)
         {
             AddPersonaS nuovaForm = new AddPersonaS();
+            
             nuovaForm.Show();
         }
     }
