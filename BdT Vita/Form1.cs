@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace BdT_Vita
 {
@@ -15,6 +17,10 @@ namespace BdT_Vita
 
         public List<Persona> persone = new List<Persona>();
         public List<Prestazione> prestazioni = new List<Prestazione>();
+
+        Persona nuovaPersona = new Persona("NuovoCognome", "NuovoNome", 1234567890, 0, false);
+
+        
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +34,18 @@ namespace BdT_Vita
 
         private void CaricamentoDati()
         {
+
+            if (!File.Exists("persone.json"))
+            {
+                File.WriteAllText("persone.json", "[]");
+            }
+
+            if (!File.Exists("prestazioni.json"))
+            {
+                File.WriteAllText("prestazioni.json", "[]");
+            }
+
+
             if (File.Exists("persone.json"))
             {
                 string personeJson = File.ReadAllText("persone.json");
@@ -39,6 +57,8 @@ namespace BdT_Vita
                 string prestazioniJson = File.ReadAllText("prestazioni.json");
                 prestazioni = JsonConvert.DeserializeObject<List<Prestazione>>(prestazioniJson);
             }
+
+            
         }
 
         private void SalvataggioDati()
@@ -61,7 +81,6 @@ namespace BdT_Vita
 
         private void btnDebito_Click(object sender, EventArgs e)
         {
-            // Logica per produrre l'elenco dei soci con debito
             List<Persona> debitori = persone.Where(s => s.CalcolaDebito() > 0).ToList();
 
             ListaDebiti.Items.Clear();
@@ -73,7 +92,6 @@ namespace BdT_Vita
 
         private void btnSegreteria_Click(object sender, EventArgs e)
         {
-            // Logica per visualizzare i soci della segreteria
             List<Persona> SegPersone = persone.Where(s => s.Segreteria).ToList();
 
             ListaSeg.Items.Clear();
@@ -85,7 +103,6 @@ namespace BdT_Vita
 
         private void btnOrdinaPrestazioni_Click(object sender, EventArgs e)
         {
-            // Logica per ordinare e visualizzare le prestazioni
             List<Prestazione> prestazioniOrdinate = prestazioni.OrderByDescending(p => p.Ore).ToList();
 
             ListaPrest.Items.Clear();
