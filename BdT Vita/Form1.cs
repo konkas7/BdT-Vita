@@ -119,12 +119,20 @@ namespace BdT_Vita
 
         private void btnSegreteria_Click_1(object sender, EventArgs e)
         {
-            List<Persona> SegPersone = persone.Where(s => s.Segreteria).ToList();
-
-            ListaSeg.Items.Clear();
-            foreach (Persona SegPersona in SegPersone)
+            if (persone != null && persone.Any())
             {
-                ListaSeg.Items.Add($"{SegPersona.Cognome}, {SegPersona.Nome} - Tel: {SegPersona.Telefono}");
+                List<Persona> SegPersone = persone.Where(p => p.Segreteria).ToList();
+
+                ListaSeg.Items.Clear();
+                foreach (Persona SegPersona in SegPersone)
+                {
+                    ListaSeg.Items.Add($"{SegPersona.Cognome}, {SegPersona.Nome} - Tel: {SegPersona.Telefono}");
+                }
+            }
+            else
+            {
+                // Gestire il caso in cui la lista persone sia vuota o nulla
+                MessageBox.Show("La lista delle persone è vuota o nulla.");
             }
         }
 

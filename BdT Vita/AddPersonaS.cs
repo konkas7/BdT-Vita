@@ -31,16 +31,14 @@ namespace BdT_Vita
             int debito = int.Parse(textBox4.Text);
             string input = textBox5.Text.ToLower(); // Leggi il testo dalla TextBox e convertilo in minuscolo
             bool segreteria;
-            if (bool.TryParse(input, out segreteria))
+
+            if (input == "true")
             {
-                // La conversione è riuscita, ora puoi usare valoreBool che è un bool
-                //Console.WriteLine($"Valore booleano inserito: {segreteria}");
-                if (segreteria == true)
-                {
-                    segreteria = true;
-                }
-                else
-                    segreteria = false;
+                segreteria = true;
+            }
+            else if (input == "false")
+            {
+                segreteria = false;
             }
             else
             {
@@ -48,18 +46,18 @@ namespace BdT_Vita
                 throw new Exception("Input non valido. Inserisci 'true' o 'false'.");
             }
 
-
-
             Persona nuovaPersona = new Persona(cognome, nome, telefono, debito, segreteria);
-            
-            // Chiudi il modulo di inserimento
-            this.Close();
 
             // Apri Form1 passando nuovaPersona al costruttore
-            Form1 form1 = new Form1(nuovaPersona);
-            // Create and show a new instance of the form
-            Form1 newForm = new Form1();
-            newForm.Show();
+            //Form1 form1 = new Form1(nuovaPersona);
+            if (Owner is Form1 form1)
+            {
+                form1.AggiungiElementoAllaLista(form1.persone, nuovaPersona);
+                form1.Aggiornamento(); // Aggiorna la visualizzazione nella lista delle persone
+            }
+
+            // Nascondi la Form corrente invece di chiuderla
+            this.Hide();
         }
     }
 }
