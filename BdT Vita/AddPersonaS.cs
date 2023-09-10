@@ -35,6 +35,12 @@ namespace BdT_Vita
             {
                 // La conversione è riuscita, ora puoi usare valoreBool che è un bool
                 //Console.WriteLine($"Valore booleano inserito: {segreteria}");
+                if (segreteria == true)
+                {
+                    segreteria = true;
+                }
+                else
+                    segreteria = false;
             }
             else
             {
@@ -51,7 +57,9 @@ namespace BdT_Vita
 
             // Apri Form1 passando nuovaPersona al costruttore
             Form1 form1 = new Form1(nuovaPersona);
-            form1.Show();
+            // Create and show a new instance of the form
+            Form1 newForm = new Form1();
+            newForm.Show();
         }
     }
 }

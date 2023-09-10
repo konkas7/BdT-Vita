@@ -163,13 +163,11 @@ namespace BdT_Vita
         private void button1_Click(object sender, EventArgs e)
         {
             AddPersonaS nuovaForm = new AddPersonaS();
-            
             nuovaForm.Show();
-            this.Close();
-            persone.Add(nuovaPersona);
-
-            Form1_Load(null, null);
             
+            persone.Add(nuovaPersona);
+            
+
         }
 
         private Persona nuovaPersona;
@@ -178,6 +176,7 @@ namespace BdT_Vita
         {
             this.nuovaPersona = nuovaPersona;
             // Ora puoi usare nuovaPersona in questa form
+            Aggiornamento();
         }
 
         
