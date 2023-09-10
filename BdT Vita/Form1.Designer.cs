@@ -46,6 +46,7 @@
             this.btnSegreteria.TabIndex = 0;
             this.btnSegreteria.Text = "Segreteria";
             this.btnSegreteria.UseVisualStyleBackColor = true;
+            this.btnSegreteria.Click += new System.EventHandler(this.btnSegreteria_Click_1);
             // 
             // btnOrdinaPrestazioni
             // 
@@ -55,6 +56,7 @@
             this.btnOrdinaPrestazioni.TabIndex = 1;
             this.btnOrdinaPrestazioni.Text = "Prestazioni";
             this.btnOrdinaPrestazioni.UseVisualStyleBackColor = true;
+            this.btnOrdinaPrestazioni.Click += new System.EventHandler(this.btnOrdinaPrestazioni_Click_1);
             // 
             // btnDebito
             // 
@@ -64,6 +66,7 @@
             this.btnDebito.TabIndex = 2;
             this.btnDebito.Text = "Debiti";
             this.btnDebito.UseVisualStyleBackColor = true;
+            this.btnDebito.Click += new System.EventHandler(this.btnDebito_Click_1);
             // 
             // button4
             // 
@@ -73,41 +76,42 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Personale";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // ListaSeg
             // 
             this.ListaSeg.FormattingEnabled = true;
             this.ListaSeg.ItemHeight = 16;
-            this.ListaSeg.Location = new System.Drawing.Point(251, 36);
+            this.ListaSeg.Location = new System.Drawing.Point(251, 12);
             this.ListaSeg.Name = "ListaSeg";
-            this.ListaSeg.Size = new System.Drawing.Size(120, 84);
+            this.ListaSeg.Size = new System.Drawing.Size(480, 100);
             this.ListaSeg.TabIndex = 4;
             // 
             // ListaPrest
             // 
             this.ListaPrest.FormattingEnabled = true;
             this.ListaPrest.ItemHeight = 16;
-            this.ListaPrest.Location = new System.Drawing.Point(251, 150);
+            this.ListaPrest.Location = new System.Drawing.Point(251, 126);
             this.ListaPrest.Name = "ListaPrest";
-            this.ListaPrest.Size = new System.Drawing.Size(120, 84);
+            this.ListaPrest.Size = new System.Drawing.Size(480, 100);
             this.ListaPrest.TabIndex = 5;
             // 
             // ListaDebiti
             // 
             this.ListaDebiti.FormattingEnabled = true;
             this.ListaDebiti.ItemHeight = 16;
-            this.ListaDebiti.Location = new System.Drawing.Point(240, 254);
+            this.ListaDebiti.Location = new System.Drawing.Point(251, 240);
             this.ListaDebiti.Name = "ListaDebiti";
-            this.ListaDebiti.Size = new System.Drawing.Size(120, 84);
+            this.ListaDebiti.Size = new System.Drawing.Size(480, 100);
             this.ListaDebiti.TabIndex = 6;
             // 
             // ListaPersone
             // 
             this.ListaPersone.FormattingEnabled = true;
             this.ListaPersone.ItemHeight = 16;
-            this.ListaPersone.Location = new System.Drawing.Point(240, 374);
+            this.ListaPersone.Location = new System.Drawing.Point(251, 354);
             this.ListaPersone.Name = "ListaPersone";
-            this.ListaPersone.Size = new System.Drawing.Size(120, 84);
+            this.ListaPersone.Size = new System.Drawing.Size(480, 100);
             this.ListaPersone.TabIndex = 7;
             // 
             // Form1

@@ -18,7 +18,6 @@ namespace BdT_Vita
         public List<Persona> persone = new List<Persona>();
         public List<Prestazione> prestazioni = new List<Prestazione>();
 
-        Persona nuovaPersona = new Persona("NuovoCognome", "NuovoNome", 1234567890, 0, false);
 
         
         public Form1()
@@ -29,6 +28,27 @@ namespace BdT_Vita
         private void Form1_Load(object sender, EventArgs e)
         {
             CaricamentoDati();
+
+            // Aggiungi tre nuove persone
+            Persona persona1 = new Persona("Vita", "Thomas", 1111111111, 1, false);
+            Persona persona2 = new Persona("Valceschini", "Paolo", 2222222222, 2, true);
+            Persona persona3 = new Persona("Pavoni", "Andrea", 3333333333, 3, true);
+
+            persone.Add(persona1);
+            persone.Add(persona2);
+            persone.Add(persona3);
+
+            // Aggiungi tre nuove prestazioni
+            Prestazione prestazione1 = new Prestazione("1", persona1, persona2, 5, DateTime.Now, "Pulizia");
+            Prestazione prestazione2 = new Prestazione("2", persona2, persona3, 8, DateTime.Now, "Giardinaggio");
+            Prestazione prestazione3 = new Prestazione("3", persona3, persona1, 3, DateTime.Now, "DogSitting");
+
+            prestazioni.Add(prestazione1);
+            prestazioni.Add(prestazione2);
+            prestazioni.Add(prestazione3);
+
+
+            SalvataggioDati();
             Aggiornamento();
         }
 
@@ -79,38 +99,7 @@ namespace BdT_Vita
             }
         }
 
-        private void btnDebito_Click(object sender, EventArgs e)
-        {
-            List<Persona> debitori = persone.Where(s => s.CalcolaDebito() > 0).ToList();
-
-            ListaDebiti.Items.Clear();
-            foreach (Persona debitor in debitori)
-            {
-                ListaDebiti.Items.Add($"{debitor.Cognome}, {debitor.Nome} | Debito: {debitor.Debito}");
-            }
-        }
-
-        private void btnSegreteria_Click(object sender, EventArgs e)
-        {
-            List<Persona> SegPersone = persone.Where(s => s.Segreteria).ToList();
-
-            ListaSeg.Items.Clear();
-            foreach (Persona SegPersona in SegPersone)
-            {
-                ListaSeg.Items.Add($"{SegPersona.Cognome}, {SegPersona.Nome} - Tel: {SegPersona.Telefono}");
-            }
-        }
-
-        private void btnOrdinaPrestazioni_Click(object sender, EventArgs e)
-        {
-            List<Prestazione> prestazioniOrdinate = prestazioni.OrderByDescending(p => p.Ore).ToList();
-
-            ListaPrest.Items.Clear();
-            foreach (Prestazione prestazione in prestazioniOrdinate)
-            {
-                ListaPrest.Items.Add($"{prestazione.Giver.Cognome}, {prestazione.Giver.Nome} -> {prestazione.Reciver.Cognome}, {prestazione.Reciver.Nome} - {prestazione.Ore} ore di {prestazione.Tipo}");
-            }
-        }
+        
 
         private void btnReload_Click(object sender, EventArgs e)
         {
@@ -122,6 +111,44 @@ namespace BdT_Vita
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+        }
+
+        private void btnSegreteria_Click_1(object sender, EventArgs e)
+        {
+            List<Persona> SegPersone = persone.Where(s => s.Segreteria).ToList();
+
+            ListaSeg.Items.Clear();
+            foreach (Persona SegPersona in SegPersone)
+            {
+                ListaSeg.Items.Add($"{SegPersona.Cognome}, {SegPersona.Nome} - Tel: {SegPersona.Telefono}");
+            }
+        }
+
+        private void btnOrdinaPrestazioni_Click_1(object sender, EventArgs e)
+        {
+            List<Prestazione> prestazioniOrdinate = prestazioni.OrderByDescending(p => p.Ore).ToList();
+
+            ListaPrest.Items.Clear();
+            foreach (Prestazione prestazione in prestazioniOrdinate)
+            {
+                ListaPrest.Items.Add($"{prestazione.Giver.Cognome}, {prestazione.Giver.Nome} -> {prestazione.Reciver.Cognome}, {prestazione.Reciver.Nome} - {prestazione.Ore} ore di {prestazione.Tipo}");
+            }
+        }
+
+        private void btnDebito_Click_1(object sender, EventArgs e)
+        {
+            List<Persona> debitori = persone.Where(s => s.CalcolaDebito() > 0).ToList();
+
+            ListaDebiti.Items.Clear();
+            foreach (Persona debitor in debitori)
+            {
+                ListaDebiti.Items.Add($"{debitor.Cognome}, {debitor.Nome} | Debito: {debitor.Debito}");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
