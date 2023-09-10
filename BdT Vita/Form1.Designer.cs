@@ -31,7 +31,6 @@
             this.btnSegreteria = new System.Windows.Forms.Button();
             this.btnOrdinaPrestazioni = new System.Windows.Forms.Button();
             this.btnDebito = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.ListaSeg = new System.Windows.Forms.ListBox();
             this.ListaPrest = new System.Windows.Forms.ListBox();
             this.ListaDebiti = new System.Windows.Forms.ListBox();
@@ -40,7 +39,7 @@
             // 
             // btnSegreteria
             // 
-            this.btnSegreteria.Location = new System.Drawing.Point(12, 12);
+            this.btnSegreteria.Location = new System.Drawing.Point(8, 126);
             this.btnSegreteria.Name = "btnSegreteria";
             this.btnSegreteria.Size = new System.Drawing.Size(143, 108);
             this.btnSegreteria.TabIndex = 0;
@@ -50,7 +49,7 @@
             // 
             // btnOrdinaPrestazioni
             // 
-            this.btnOrdinaPrestazioni.Location = new System.Drawing.Point(12, 126);
+            this.btnOrdinaPrestazioni.Location = new System.Drawing.Point(8, 240);
             this.btnOrdinaPrestazioni.Name = "btnOrdinaPrestazioni";
             this.btnOrdinaPrestazioni.Size = new System.Drawing.Size(143, 108);
             this.btnOrdinaPrestazioni.TabIndex = 1;
@@ -60,7 +59,7 @@
             // 
             // btnDebito
             // 
-            this.btnDebito.Location = new System.Drawing.Point(12, 240);
+            this.btnDebito.Location = new System.Drawing.Point(8, 354);
             this.btnDebito.Name = "btnDebito";
             this.btnDebito.Size = new System.Drawing.Size(143, 108);
             this.btnDebito.TabIndex = 2;
@@ -68,21 +67,11 @@
             this.btnDebito.UseVisualStyleBackColor = true;
             this.btnDebito.Click += new System.EventHandler(this.btnDebito_Click_1);
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(12, 354);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 108);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Personale";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // ListaSeg
             // 
             this.ListaSeg.FormattingEnabled = true;
             this.ListaSeg.ItemHeight = 16;
-            this.ListaSeg.Location = new System.Drawing.Point(251, 12);
+            this.ListaSeg.Location = new System.Drawing.Point(247, 126);
             this.ListaSeg.Name = "ListaSeg";
             this.ListaSeg.Size = new System.Drawing.Size(480, 100);
             this.ListaSeg.TabIndex = 4;
@@ -91,7 +80,7 @@
             // 
             this.ListaPrest.FormattingEnabled = true;
             this.ListaPrest.ItemHeight = 16;
-            this.ListaPrest.Location = new System.Drawing.Point(251, 126);
+            this.ListaPrest.Location = new System.Drawing.Point(247, 240);
             this.ListaPrest.Name = "ListaPrest";
             this.ListaPrest.Size = new System.Drawing.Size(480, 100);
             this.ListaPrest.TabIndex = 5;
@@ -100,18 +89,19 @@
             // 
             this.ListaDebiti.FormattingEnabled = true;
             this.ListaDebiti.ItemHeight = 16;
-            this.ListaDebiti.Location = new System.Drawing.Point(251, 240);
+            this.ListaDebiti.Location = new System.Drawing.Point(247, 354);
             this.ListaDebiti.Name = "ListaDebiti";
             this.ListaDebiti.Size = new System.Drawing.Size(480, 100);
             this.ListaDebiti.TabIndex = 6;
             // 
             // ListaPersone
             // 
+            this.ListaPersone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaPersone.FormattingEnabled = true;
-            this.ListaPersone.ItemHeight = 16;
-            this.ListaPersone.Location = new System.Drawing.Point(251, 354);
+            this.ListaPersone.ItemHeight = 25;
+            this.ListaPersone.Location = new System.Drawing.Point(12, 12);
             this.ListaPersone.Name = "ListaPersone";
-            this.ListaPersone.Size = new System.Drawing.Size(480, 100);
+            this.ListaPersone.Size = new System.Drawing.Size(715, 79);
             this.ListaPersone.TabIndex = 7;
             // 
             // Form1
@@ -123,7 +113,6 @@
             this.Controls.Add(this.ListaDebiti);
             this.Controls.Add(this.ListaPrest);
             this.Controls.Add(this.ListaSeg);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.btnDebito);
             this.Controls.Add(this.btnOrdinaPrestazioni);
             this.Controls.Add(this.btnSegreteria);
@@ -139,7 +128,6 @@
         private System.Windows.Forms.Button btnSegreteria;
         private System.Windows.Forms.Button btnOrdinaPrestazioni;
         private System.Windows.Forms.Button btnDebito;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ListBox ListaSeg;
         private System.Windows.Forms.ListBox ListaPrest;
         private System.Windows.Forms.ListBox ListaDebiti;

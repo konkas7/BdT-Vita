@@ -137,12 +137,12 @@ namespace BdT_Vita
 
         private void btnDebito_Click_1(object sender, EventArgs e)
         {
-            List<Persona> givers = persone.Where(s => s.CalcolaDebito() > 0).ToList();
+            List<Persona> debitors = persone.Where(s => s.CalcolaDebito() > 0).ToList();
 
             ListaDebiti.Items.Clear();
-            foreach (Persona giver in givers)
+            foreach (Persona debitor in debitors)
             {
-                ListaDebiti.Items.Add($"{giver.Cognome}, {giver.Nome} | Debito: {giver.Debito}");
+                ListaDebiti.Items.Add($"{debitor.Cognome}, {debitor.Nome} | Debito: {debitor.Debito}");
             }
         }
 
