@@ -26,7 +26,7 @@ namespace BdT_Vita
             string id = textBox1.Text;
 
             // Verifica se l'ID esiste già
-            if (form1.PrestazioneIdEsiste(id))
+            if (form1.PrestazioneIdEsiste(id) && int.TryParse(id, out int numero) && numero > 0)
             {
                 MessageBox.Show("L'ID specificato esiste già.");
                 return; // Esci dalla funzione senza aggiungere la prestazione
