@@ -36,6 +36,7 @@
             this.ListaDebiti = new System.Windows.Forms.ListBox();
             this.ListaPersone = new System.Windows.Forms.ListBox();
             this.AddPersona = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSegreteria
@@ -116,11 +117,22 @@
             this.AddPersona.UseVisualStyleBackColor = true;
             this.AddPersona.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(796, 126);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(357, 79);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Aggiungi prestazione";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1189, 470);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.AddPersona);
             this.Controls.Add(this.ListaPersone);
             this.Controls.Add(this.ListaDebiti);
@@ -146,6 +158,7 @@
         private System.Windows.Forms.ListBox ListaDebiti;
         private System.Windows.Forms.ListBox ListaPersone;
         private System.Windows.Forms.Button AddPersona;
+        private System.Windows.Forms.Button button1;
     }
 }
 

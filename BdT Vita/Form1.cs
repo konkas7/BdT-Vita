@@ -18,8 +18,12 @@ namespace BdT_Vita
         public List<Persona> persone = new List<Persona>();
         public List<Prestazione> prestazioni = new List<Prestazione>();
 
+        public List<Persona> Persone
+        {
+            get { return persone; }
+        }
 
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -187,6 +191,19 @@ namespace BdT_Vita
                 SalvataggioDati();
             }
 
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AddPrestazioneS nuovaForm2 = new AddPrestazioneS();
+            nuovaForm2.ShowDialog();
+            if (nuovaForm2.NuovaPrestazione != null)
+            {
+                //prestazioni.Add(nuovaForm2.NuovaPrestazione); // Aggiungi la nuova prestazione alla lista delle prestazioni nella nuova form
+                Aggiornamento(); // Aggiorna la visualizzazione nella lista delle persone
+                SalvataggioDati();
+            }
 
         }
 
