@@ -24,6 +24,13 @@ namespace BdT_Vita
 
 
             string id = textBox1.Text;
+
+            // Verifica se l'ID esiste già
+            if (form1.PrestazioneIdEsiste(id))
+            {
+                MessageBox.Show("L'ID specificato esiste già.");
+                return; // Esci dalla funzione senza aggiungere la prestazione
+            }
             int ore = int.Parse(textBox2.Text);
             string tipo = textBox3.Text;
             DateTime data = DateTime.Now;

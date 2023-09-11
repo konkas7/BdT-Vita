@@ -194,6 +194,12 @@ namespace BdT_Vita
 
         }
 
+        public bool PrestazioneIdEsiste(string id)
+        {
+            return prestazioni.Any(p => p.Id == id);
+        }
+
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             AddPrestazioneS nuovaForm2 = new AddPrestazioneS();
