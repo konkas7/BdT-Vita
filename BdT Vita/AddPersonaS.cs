@@ -21,10 +21,10 @@ namespace BdT_Vita
         private void AddPersonaS_Load(object sender, EventArgs e)
         {
             // Aggiungi "true" come primo elemento
-            comboBox1.Items.Add("true");
+            comboBox1.Items.Add("si");
 
             // Aggiungi "false" come secondo elemento
-            comboBox1.Items.Add("false");
+            comboBox1.Items.Add("no");
 
         }
 
@@ -41,11 +41,11 @@ namespace BdT_Vita
 
             // Confronta la selezione con le opzioni possibili
             bool segreteria;
-            if (selezione == "true")
+            if (selezione == "si")
             {
                 segreteria = true;
             }
-            else if (selezione == "false")
+            else if (selezione == "no")
             {
                 segreteria = false;
             }
@@ -55,6 +55,7 @@ namespace BdT_Vita
                 MessageBox.Show("Seleziona una delle opzioni disponibili.");
                 return;
             }
+
 
             // Assegna la nuova persona alla proprietà NuovaPersona
             NuovaPersona = new Persona(cognome, nome, telefono, debito, segreteria);
@@ -71,6 +72,16 @@ namespace BdT_Vita
 
             // Chiudi la form corrente
             this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

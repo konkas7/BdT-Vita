@@ -74,9 +74,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(70, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.label1.Text = "Cognome";
             // 
             // label2
             // 
@@ -85,34 +85,35 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
+            this.label2.Text = "Nome";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 193);
+            this.label3.Location = new System.Drawing.Point(34, 193);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.Size = new System.Drawing.Size(120, 16);
             this.label3.TabIndex = 7;
-            this.label3.Text = "label3";
+            this.label3.Text = "Numero di telefono";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(70, 272);
+            this.label4.Location = new System.Drawing.Point(52, 275);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.Size = new System.Drawing.Size(84, 16);
             this.label4.TabIndex = 8;
-            this.label4.Text = "label4";
+            this.label4.Text = "Ore di debito";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(70, 345);
+            this.label5.Location = new System.Drawing.Point(19, 353);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 16);
+            this.label5.Size = new System.Drawing.Size(155, 16);
             this.label5.TabIndex = 9;
-            this.label5.Text = "label5";
+            this.label5.Text = "Appartenenza segreteria";
             // 
             // button1
             // 
@@ -131,6 +132,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(197, 24);
             this.comboBox1.TabIndex = 11;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // AddPersonaS
             // 

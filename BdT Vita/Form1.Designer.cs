@@ -41,7 +41,7 @@
             // 
             // btnSegreteria
             // 
-            this.btnSegreteria.Location = new System.Drawing.Point(8, 126);
+            this.btnSegreteria.Location = new System.Drawing.Point(523, 12);
             this.btnSegreteria.Name = "btnSegreteria";
             this.btnSegreteria.Size = new System.Drawing.Size(143, 108);
             this.btnSegreteria.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             // btnOrdinaPrestazioni
             // 
-            this.btnOrdinaPrestazioni.Location = new System.Drawing.Point(8, 240);
+            this.btnOrdinaPrestazioni.Location = new System.Drawing.Point(523, 126);
             this.btnOrdinaPrestazioni.Name = "btnOrdinaPrestazioni";
             this.btnOrdinaPrestazioni.Size = new System.Drawing.Size(143, 108);
             this.btnOrdinaPrestazioni.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             // btnDebito
             // 
-            this.btnDebito.Location = new System.Drawing.Point(8, 354);
+            this.btnDebito.Location = new System.Drawing.Point(523, 240);
             this.btnDebito.Name = "btnDebito";
             this.btnDebito.Size = new System.Drawing.Size(143, 108);
             this.btnDebito.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             this.ListaSeg.FormattingEnabled = true;
             this.ListaSeg.ItemHeight = 16;
-            this.ListaSeg.Location = new System.Drawing.Point(247, 126);
+            this.ListaSeg.Location = new System.Drawing.Point(714, 12);
             this.ListaSeg.Name = "ListaSeg";
             this.ListaSeg.Size = new System.Drawing.Size(480, 100);
             this.ListaSeg.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             this.ListaPrest.FormattingEnabled = true;
             this.ListaPrest.ItemHeight = 16;
-            this.ListaPrest.Location = new System.Drawing.Point(247, 240);
+            this.ListaPrest.Location = new System.Drawing.Point(714, 126);
             this.ListaPrest.Name = "ListaPrest";
             this.ListaPrest.Size = new System.Drawing.Size(480, 100);
             this.ListaPrest.TabIndex = 5;
@@ -91,7 +91,7 @@
             // 
             this.ListaDebiti.FormattingEnabled = true;
             this.ListaDebiti.ItemHeight = 16;
-            this.ListaDebiti.Location = new System.Drawing.Point(247, 354);
+            this.ListaDebiti.Location = new System.Drawing.Point(714, 240);
             this.ListaDebiti.Name = "ListaDebiti";
             this.ListaDebiti.Size = new System.Drawing.Size(480, 100);
             this.ListaDebiti.TabIndex = 6;
@@ -104,14 +104,14 @@
             this.ListaPersone.ItemHeight = 25;
             this.ListaPersone.Location = new System.Drawing.Point(12, 12);
             this.ListaPersone.Name = "ListaPersone";
-            this.ListaPersone.Size = new System.Drawing.Size(715, 79);
+            this.ListaPersone.Size = new System.Drawing.Size(457, 379);
             this.ListaPersone.TabIndex = 7;
             // 
             // AddPersona
             // 
-            this.AddPersona.Location = new System.Drawing.Point(796, 12);
+            this.AddPersona.Location = new System.Drawing.Point(12, 473);
             this.AddPersona.Name = "AddPersona";
-            this.AddPersona.Size = new System.Drawing.Size(357, 79);
+            this.AddPersona.Size = new System.Drawing.Size(592, 79);
             this.AddPersona.TabIndex = 8;
             this.AddPersona.Text = "Aggiungi persona";
             this.AddPersona.UseVisualStyleBackColor = true;
@@ -119,9 +119,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(796, 126);
+            this.button1.Location = new System.Drawing.Point(610, 473);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(357, 79);
+            this.button1.Size = new System.Drawing.Size(590, 79);
             this.button1.TabIndex = 9;
             this.button1.Text = "Aggiungi prestazione";
             this.button1.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 470);
+            this.ClientSize = new System.Drawing.Size(1212, 564);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.AddPersona);
             this.Controls.Add(this.ListaPersone);

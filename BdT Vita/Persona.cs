@@ -118,27 +118,15 @@ namespace BdT_Vita
             Prestazioni.Add(prestazione);
         }
 
-        // Metodo per calcolare il saldo del socio (ore erogate - ore ricevute)
+        // Metodo per calcolare il debito del socio (ore erogate - ore ricevute)
         public int CalcolaDebito()
         {
-            int oreErogate = 0;
-            int oreRicevute = 0;
+            int oreErogate = Prestazioni.Where(p => p.Giver == this).Sum(p => p.Ore);
+            int oreRicevute = Prestazioni.Where(p => p.Reciver == this).Sum(p => p.Ore);
 
-            foreach (Prestazione prestazione in Prestazioni)
-            {
-                if (prestazione.Giver.Equals(this))
-                {
-                    oreErogate += prestazione.Ore;
-                }
-                else if (prestazione.Reciver.Equals(this))
-                {
-                    oreRicevute += prestazione.Ore;
-                }
-            }
-
-            this.Debito = oreRicevute - oreErogate;
-            return this.Debito;
+            return oreRicevute - oreErogate;
         }
+
 
         protected Persona(Persona other) : this(other.Cognome, other.Nome, other.Telefono, other.Debito, other.Segreteria)
         {

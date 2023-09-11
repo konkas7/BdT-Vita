@@ -155,13 +155,18 @@ namespace BdT_Vita
 
         private void btnDebito_Click_1(object sender, EventArgs e)
         {
+            // Calcola i debiti
             List<Persona> debitors = persone.Where(s => s.CalcolaDebito() > 0).ToList();
 
+            // Aggiorna la lista dei debiti
             ListaDebiti.Items.Clear();
             foreach (Persona debitor in debitors)
             {
                 ListaDebiti.Items.Add($"{debitor.Cognome}, {debitor.Nome} | Debito: {debitor.Debito}");
             }
+
+            // Aggiorna la lista dei debiti dopo aver calcolato e popolato i debiti
+            //Aggiornamento();
         }
 
         private void button4_Click(object sender, EventArgs e)
