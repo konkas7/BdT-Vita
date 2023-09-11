@@ -184,6 +184,7 @@ namespace BdT_Vita
                 // Aggiungi la nuova persona alla lista persone solo se è stata creata
                 persone.Add(nuovaForm.NuovaPersona);
                 Aggiornamento(); // Aggiorna la visualizzazione nella lista delle persone
+                SalvataggioDati();
             }
 
 

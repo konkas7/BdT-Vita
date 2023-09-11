@@ -67,6 +67,8 @@ namespace BdT_Vita
                 form1.Aggiornamento(); // Aggiorna la visualizzazione nella lista delle persone
             }
 
+            // Salva i dati
+
             // Chiudi la form corrente
             this.Close();
         }
