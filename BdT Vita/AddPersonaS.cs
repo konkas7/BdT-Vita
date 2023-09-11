@@ -12,6 +12,7 @@ namespace BdT_Vita
 {
     public partial class AddPersonaS : Form
     {
+        public Persona NuovaPersona { get; private set; }
         public AddPersonaS()
         {
             InitializeComponent();
@@ -19,6 +20,11 @@ namespace BdT_Vita
 
         private void AddPersonaS_Load(object sender, EventArgs e)
         {
+            // Aggiungi "true" come primo elemento
+            comboBox1.Items.Add("true");
+
+            // Aggiungi "false" come secondo elemento
+            comboBox1.Items.Add("false");
 
         }
 
@@ -29,35 +35,40 @@ namespace BdT_Vita
             string cognome = textBox2.Text;
             double telefono = double.Parse(textBox3.Text);
             int debito = int.Parse(textBox4.Text);
-            string input = textBox5.Text.ToLower(); // Leggi il testo dalla TextBox e convertilo in minuscolo
-            bool segreteria;
+            //string input = textBox5.Text.ToLower(); // Leggi il testo dalla TextBox e convertilo in minuscolo
+                                                    // Leggi la selezione dalla ComboBox
+            string selezione = comboBox1.SelectedItem.ToString();
 
-            if (input == "true")
+            // Confronta la selezione con le opzioni possibili
+            bool segreteria;
+            if (selezione == "true")
             {
                 segreteria = true;
             }
-            else if (input == "false")
+            else if (selezione == "false")
             {
                 segreteria = false;
             }
             else
             {
-                // La conversione non è riuscita, gestisci l'input non valido
-                throw new Exception("Input non valido. Inserisci 'true' o 'false'.");
+                // Gestisci il caso in cui la selezione non corrisponda a "true" o "false"
+                MessageBox.Show("Seleziona una delle opzioni disponibili.");
+                return;
             }
 
-            Persona nuovaPersona = new Persona(cognome, nome, telefono, debito, segreteria);
+            // Assegna la nuova persona alla proprietà NuovaPersona
+            NuovaPersona = new Persona(cognome, nome, telefono, debito, segreteria);
 
             // Apri Form1 passando nuovaPersona al costruttore
             //Form1 form1 = new Form1(nuovaPersona);
             if (Owner is Form1 form1)
             {
-                form1.AggiungiElementoAllaLista(form1.persone, nuovaPersona);
+                form1.AggiungiElementoAllaLista(form1.persone, NuovaPersona);
                 form1.Aggiornamento(); // Aggiorna la visualizzazione nella lista delle persone
             }
 
-            // Nascondi la Form corrente invece di chiuderla
-            this.Hide();
+            // Chiudi la form corrente
+            this.Close();
         }
     }
 }

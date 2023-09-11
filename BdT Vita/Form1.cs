@@ -23,6 +23,7 @@ namespace BdT_Vita
         public Form1()
         {
             InitializeComponent();
+            persone = new List<Persona>(); // Inizializza la lista persone
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -102,6 +103,7 @@ namespace BdT_Vita
         public void AggiungiElementoAllaLista(List<Persona> persone, Persona nuovaPersona)
         {
             persone.Add(nuovaPersona);
+            SalvataggioDati();
         }
 
 
@@ -170,23 +172,35 @@ namespace BdT_Vita
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //AddPersonaS nuovaForm = new AddPersonaS();
+            //nuovaForm.Show();
+
+            //persone.Add(nuovaPersona);
+
             AddPersonaS nuovaForm = new AddPersonaS();
-            nuovaForm.Show();
-            
-            persone.Add(nuovaPersona);
-            
+            nuovaForm.ShowDialog(); // Mostra la form in modalità dialogo
+            if (nuovaForm.NuovaPersona != null)
+            {
+                // Aggiungi la nuova persona alla lista persone solo se è stata creata
+                persone.Add(nuovaForm.NuovaPersona);
+                Aggiornamento(); // Aggiorna la visualizzazione nella lista delle persone
+            }
+
 
         }
 
-        private Persona nuovaPersona;
+        /*private Persona nuovaPersona;
 
         public Form1(Persona nuovaPersona) : this()
         {
             this.nuovaPersona = nuovaPersona;
             // Ora puoi usare nuovaPersona in questa form
+            CaricamentoDati();
+            SalvataggioDati();
             Aggiornamento();
         }
+        */
 
-        
+
     }
 }
