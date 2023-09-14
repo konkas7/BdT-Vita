@@ -162,7 +162,11 @@ namespace BdT_Vita
             ListaDebiti.Items.Clear();
             foreach (Persona debitor in debitors)
             {
-                ListaDebiti.Items.Add($"{debitor.Cognome}, {debitor.Nome} | Debito: {debitor.Debito}");
+                if(debitor.Debito != 0)
+                {
+                    ListaDebiti.Items.Add($"{debitor.Cognome}, {debitor.Nome} | Debito: {debitor.Debito}");
+
+                }
             }
 
             // Aggiorna la lista dei debiti dopo aver calcolato e popolato i debiti
