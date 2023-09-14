@@ -38,16 +38,17 @@ namespace BdT_Vita
             string giorno = textBox4.Text;
             // Leggi l'erogatore selezionato dalla ComboBox
             string erogatoreSelezionato = comboBox1.SelectedItem.ToString();
+            
 
             // Trova la persona corrispondente nella lista delle persone
             Persona erogatore = form1.persone.FirstOrDefault(p => $"{p.Cognome}, {p.Nome}" == erogatoreSelezionato);
-
+            erogatore.Debito -= ore;
             // Leggi il ricevente selezionato dalla ComboBox
             string riceventeSelezionato = comboBox2.SelectedItem.ToString();
 
             // Trova la persona corrispondente nella lista delle persone
             Persona ricevente = form1.persone.FirstOrDefault(p => $"{p.Cognome}, {p.Nome}" == riceventeSelezionato);
-
+            ricevente.Debito += ore;
             // Crea l'oggetto Prestazione utilizzando erogatore e ricevente
             NuovaPrestazione = new Prestazione(id,giorno,erogatore, ricevente,ore, data, tipo);
 
