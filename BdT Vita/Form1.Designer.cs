@@ -75,7 +75,7 @@
             this.ListaSeg.ItemHeight = 16;
             this.ListaSeg.Location = new System.Drawing.Point(714, 12);
             this.ListaSeg.Name = "ListaSeg";
-            this.ListaSeg.Size = new System.Drawing.Size(480, 100);
+            this.ListaSeg.Size = new System.Drawing.Size(542, 100);
             this.ListaSeg.TabIndex = 4;
             // 
             // ListaPrest
@@ -84,7 +84,7 @@
             this.ListaPrest.ItemHeight = 16;
             this.ListaPrest.Location = new System.Drawing.Point(714, 126);
             this.ListaPrest.Name = "ListaPrest";
-            this.ListaPrest.Size = new System.Drawing.Size(480, 100);
+            this.ListaPrest.Size = new System.Drawing.Size(542, 100);
             this.ListaPrest.TabIndex = 5;
             // 
             // ListaDebiti
@@ -93,7 +93,7 @@
             this.ListaDebiti.ItemHeight = 16;
             this.ListaDebiti.Location = new System.Drawing.Point(714, 240);
             this.ListaDebiti.Name = "ListaDebiti";
-            this.ListaDebiti.Size = new System.Drawing.Size(480, 100);
+            this.ListaDebiti.Size = new System.Drawing.Size(542, 100);
             this.ListaDebiti.TabIndex = 6;
             this.ListaDebiti.SelectedIndexChanged += new System.EventHandler(this.ListaDebiti_SelectedIndexChanged);
             // 
@@ -131,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1212, 564);
+            this.ClientSize = new System.Drawing.Size(1282, 564);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.AddPersona);
             this.Controls.Add(this.ListaPersone);

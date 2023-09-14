@@ -10,6 +10,7 @@ namespace BdT_Vita
     public class Prestazione : IEquatable<Prestazione>
     {
         public string _id;
+        public string _giorno;
         public Persona _giver; 
         public Persona _reciver; 
         public int _ore;    
@@ -29,6 +30,20 @@ namespace BdT_Vita
                     _id = value;
                 else
                     throw new Exception("Id non valido");
+            }
+        }
+
+        [JsonProperty]
+        public string Giorno
+        {
+            get
+            {
+                return _giorno;
+            }
+            private set
+            {
+                
+                    _giorno = value;
             }
         }
         [JsonProperty]
@@ -107,9 +122,10 @@ namespace BdT_Vita
             }
         }
 
-        public Prestazione(string id, Persona giver, Persona reciver, int ore, DateTime data, string tipo)
+        public Prestazione(string id, string giorno, Persona giver, Persona reciver, int ore, DateTime data, string tipo)
         {
             Id = id;
+            Giorno = giorno;
             Giver = giver;
             Reciver = reciver;
             Ore = ore;
@@ -122,7 +138,7 @@ namespace BdT_Vita
         }
 
 
-        protected Prestazione(Prestazione other) : this(other.Id, other.Giver, other.Reciver, other.Ore, other.Data, other.Tipo)
+        protected Prestazione(Prestazione other) : this(other.Id, other.Giorno, other.Giver, other.Reciver, other.Ore, other.Data, other.Tipo)
         {
         }
         public Prestazione Clone()

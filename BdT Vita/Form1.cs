@@ -145,11 +145,11 @@ namespace BdT_Vita
         private void btnOrdinaPrestazioni_Click_1(object sender, EventArgs e)
         {
             List<Prestazione> prestazioniOrdinate = prestazioni.OrderByDescending(p => p.Ore).ToList();
-
+            
             ListaPrest.Items.Clear();
             foreach (Prestazione prestazione in prestazioniOrdinate)
             {
-                ListaPrest.Items.Add($"{prestazione.Giver.Cognome}, {prestazione.Giver.Nome} -> {prestazione.Reciver.Cognome}, {prestazione.Reciver.Nome} - {prestazione.Ore} ore di {prestazione.Tipo}");
+                ListaPrest.Items.Add($"{prestazione.Giver.Cognome}, {prestazione.Giver.Nome} -> {prestazione.Reciver.Cognome}, {prestazione.Reciver.Nome} - {prestazione.Ore} ore di {prestazione.Tipo} il giorno {prestazione.Giorno}");
             }
         }
 

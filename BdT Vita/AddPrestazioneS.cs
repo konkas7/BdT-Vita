@@ -34,6 +34,8 @@ namespace BdT_Vita
             int ore = int.Parse(textBox2.Text);
             string tipo = textBox3.Text;
             DateTime data = DateTime.Now;
+
+            string giorno = textBox4.Text;
             // Leggi l'erogatore selezionato dalla ComboBox
             string erogatoreSelezionato = comboBox1.SelectedItem.ToString();
 
@@ -47,7 +49,7 @@ namespace BdT_Vita
             Persona ricevente = form1.persone.FirstOrDefault(p => $"{p.Cognome}, {p.Nome}" == riceventeSelezionato);
 
             // Crea l'oggetto Prestazione utilizzando erogatore e ricevente
-            NuovaPrestazione = new Prestazione(id,erogatore, ricevente,ore, data, tipo);
+            NuovaPrestazione = new Prestazione(id,giorno,erogatore, ricevente,ore, data, tipo);
 
             // Aggiungi la nuova prestazione alla lista delle prestazioni
             form1.prestazioni.Add(NuovaPrestazione);

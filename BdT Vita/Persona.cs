@@ -124,7 +124,7 @@ namespace BdT_Vita
             int oreErogate = Prestazioni.Where(p => p.Giver == this).Sum(p => p.Ore);
             int oreRicevute = Prestazioni.Where(p => p.Reciver == this).Sum(p => p.Ore);
 
-            return oreRicevute - oreErogate;
+            return 1; //oreRicevute - oreErogate;
         }
 
 
