@@ -268,6 +268,7 @@ namespace BdT_Vita
                     Aggiornamento();
                 }
             }
+
         }
 
 
