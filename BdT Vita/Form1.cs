@@ -248,6 +248,11 @@ namespace BdT_Vita
                     SalvataggioDati();
                     Aggiornamento();
                 }
+                else
+                {
+                    // Mostra un messaggio se la persona non è stata trovata nella lista
+                    MessageBox.Show("La persona non è stata trovata.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -266,6 +271,11 @@ namespace BdT_Vita
                     prestazioni.Remove(prestazioneDaRimuovere);
                     SalvataggioDati();
                     Aggiornamento();
+                }
+                else
+                {
+                    // Mostra un messaggio se la persona non è stata trovata nella lista
+                    MessageBox.Show("La prestazione non è stata trovata.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

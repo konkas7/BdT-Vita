@@ -49,5 +49,10 @@ namespace BdT_Vita
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void EliminaPersonaForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

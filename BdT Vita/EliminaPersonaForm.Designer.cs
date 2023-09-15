@@ -64,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(164, 27);
+            this.label1.Location = new System.Drawing.Point(153, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 3;
@@ -73,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(151, 92);
+            this.label2.Location = new System.Drawing.Point(162, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 4;
@@ -83,6 +83,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(400, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -91,6 +92,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "EliminaPersonaForm";
             this.Text = "EliminaPersonaForm";
+            this.Load += new System.EventHandler(this.EliminaPersonaForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
