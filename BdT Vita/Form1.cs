@@ -222,6 +222,46 @@ namespace BdT_Vita
 
         }
 
+        private void EliminaPersona_Click(object sender, EventArgs e)
+        {
+            EliminaPersonaForm eliminaPersonaForm = new EliminaPersonaForm();
+            if (eliminaPersonaForm.ShowDialog() == DialogResult.OK)
+            {
+                // Ottieni il cognome e il nome dalla form di eliminazione
+                string cognome = eliminaPersonaForm.Cognome;
+                string nome = eliminaPersonaForm.Nome;
+
+                // Trova la persona nella lista delle persone per cognome e nome e rimuovila
+                Persona personaDaRimuovere = persone.FirstOrDefault(p => p.Cognome == cognome && p.Nome == nome);
+                if (personaDaRimuovere != null)
+                {
+                    persone.Remove(personaDaRimuovere);
+                    SalvataggioDati();
+                    Aggiornamento();
+                }
+            }
+        }
+
+        private void EliminaPrestazione_Click(object sender, EventArgs e)
+        {
+            EliminaPrestazioneForm eliminaPrestazioneForm = new EliminaPrestazioneForm();
+            if (eliminaPrestazioneForm.ShowDialog() == DialogResult.OK)
+            {
+                // Ottieni l'ID dalla form di eliminazione
+                string idPrestazione = eliminaPrestazioneForm.IdPrestazione;
+
+                // Trova la prestazione nella lista delle prestazioni per ID e rimuovila
+                Prestazione prestazioneDaRimuovere = prestazioni.FirstOrDefault(p => p.Id == idPrestazione);
+                if (prestazioneDaRimuovere != null)
+                {
+                    prestazioni.Remove(prestazioneDaRimuovere);
+                    SalvataggioDati();
+                    Aggiornamento();
+                }
+            }
+        }
+
+
         /*private Persona nuovaPersona;
 
         public Form1(Persona nuovaPersona) : this()

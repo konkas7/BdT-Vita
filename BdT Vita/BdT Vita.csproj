@@ -61,6 +61,18 @@
     <Compile Include="AddPrestazioneS.Designer.cs">
       <DependentUpon>AddPrestazioneS.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminaPersonaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminaPersonaForm.Designer.cs">
+      <DependentUpon>EliminaPersonaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminaPrestazioneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminaPrestazioneForm.Designer.cs">
+      <DependentUpon>EliminaPrestazioneForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddPrestazioneS.resx">
       <DependentUpon>AddPrestazioneS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminaPersonaForm.resx">
+      <DependentUpon>EliminaPersonaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

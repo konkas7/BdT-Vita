@@ -37,6 +37,8 @@
             this.ListaPersone = new System.Windows.Forms.ListBox();
             this.AddPersona = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.EliminaPersona = new System.Windows.Forms.Button();
+            this.EliminaPrestazione = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSegreteria
@@ -127,12 +129,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // EliminaPersona
+            // 
+            this.EliminaPersona.Location = new System.Drawing.Point(12, 388);
+            this.EliminaPersona.Name = "EliminaPersona";
+            this.EliminaPersona.Size = new System.Drawing.Size(592, 79);
+            this.EliminaPersona.TabIndex = 10;
+            this.EliminaPersona.Text = "Elimina persona";
+            this.EliminaPersona.UseVisualStyleBackColor = true;
+            this.EliminaPersona.Click += new System.EventHandler(this.EliminaPersona_Click);
+            // 
+            // EliminaPrestazione
+            // 
+            this.EliminaPrestazione.Location = new System.Drawing.Point(610, 388);
+            this.EliminaPrestazione.Name = "EliminaPrestazione";
+            this.EliminaPrestazione.Size = new System.Drawing.Size(590, 79);
+            this.EliminaPrestazione.TabIndex = 11;
+            this.EliminaPrestazione.Text = "Elimina prestazione";
+            this.EliminaPrestazione.UseVisualStyleBackColor = true;
+            this.EliminaPrestazione.Click += new System.EventHandler(this.EliminaPrestazione_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1282, 564);
+            this.Controls.Add(this.EliminaPrestazione);
+            this.Controls.Add(this.EliminaPersona);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.AddPersona);
             this.Controls.Add(this.ListaPersone);
@@ -160,6 +184,8 @@
         private System.Windows.Forms.ListBox ListaPersone;
         private System.Windows.Forms.Button AddPersona;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button EliminaPersona;
+        private System.Windows.Forms.Button EliminaPrestazione;
     }
 }
 
