@@ -92,6 +92,9 @@
     <EmbeddedResource Include="EliminaPersonaForm.resx">
       <DependentUpon>EliminaPersonaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminaPrestazioneForm.resx">
+      <DependentUpon>EliminaPrestazioneForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

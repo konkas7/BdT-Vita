@@ -144,13 +144,22 @@ namespace BdT_Vita
 
         private void btnOrdinaPrestazioni_Click_1(object sender, EventArgs e)
         {
-            List<Prestazione> prestazioniOrdinate = prestazioni.OrderByDescending(p => p.Ore).ToList();
-            
-            ListaPrest.Items.Clear();
-            foreach (Prestazione prestazione in prestazioniOrdinate)
+            if(prestazioni != null && prestazioni.Any())
             {
-                ListaPrest.Items.Add($"{prestazione.Giver.Cognome}, {prestazione.Giver.Nome} -> {prestazione.Reciver.Cognome}, {prestazione.Reciver.Nome} - {prestazione.Ore} ore di {prestazione.Tipo} il giorno {prestazione.Giorno}");
+                List<Prestazione> prestazioniOrdinate = prestazioni.OrderByDescending(p => p.Ore).ToList();
+
+                ListaPrest.Items.Clear();
+                foreach (Prestazione prestazione in prestazioniOrdinate)
+                {
+                    ListaPrest.Items.Add($"{prestazione.Giver.Cognome}, {prestazione.Giver.Nome} -> {prestazione.Reciver.Cognome}, {prestazione.Reciver.Nome} - {prestazione.Ore} ore di {prestazione.Tipo} il giorno {prestazione.Giorno}");
+                }
             }
+            else
+            {
+                // Gestire il caso in cui la lista prestazioni sia vuota o nulla
+                MessageBox.Show("La lista delle prestazioni è vuota o nulla.");
+            }
+
         }
 
         private void btnDebito_Click_1(object sender, EventArgs e)
