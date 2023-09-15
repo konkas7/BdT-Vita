@@ -103,6 +103,14 @@ namespace BdT_Vita
             {
                 ListaPersone.Items.Add($"{persona.Cognome}, {persona.Nome} - Tel: {persona.Telefono}");
             }
+
+            // Cancella tutte le prestazioni visualizzate precedentemente
+            ListaPrest.Items.Clear();
+
+            foreach (Prestazione prestazione in prestazioni)
+            {
+                ListaPrest.Items.Add($"{prestazione.Giver.Cognome}, {prestazione.Giver.Nome} -> {prestazione.Reciver.Cognome}, {prestazione.Reciver.Nome} - {prestazione.Ore} ore di {prestazione.Tipo} il giorno {prestazione.Giorno}");
+            }
         }
         public void AggiungiElementoAllaLista(List<Persona> persone, Persona nuovaPersona)
         {
@@ -270,11 +278,11 @@ namespace BdT_Vita
                 {
                     prestazioni.Remove(prestazioneDaRimuovere);
                     SalvataggioDati();
-                    Aggiornamento();
+                    Aggiornamento(); // Aggiorna la visualizzazione delle prestazioni dopo la rimozione
                 }
                 else
                 {
-                    // Mostra un messaggio se la persona non è stata trovata nella lista
+                    // Mostra un messaggio se la prestazione non è stata trovata nella lista
                     MessageBox.Show("La prestazione non è stata trovata.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
