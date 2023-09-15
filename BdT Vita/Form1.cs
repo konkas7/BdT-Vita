@@ -140,7 +140,7 @@ namespace BdT_Vita
                 ListaSeg.Items.Clear();
                 foreach (Persona SegPersona in SegPersone)
                 {
-                    ListaSeg.Items.Add($"{SegPersona.Cognome}, {SegPersona.Nome} - Tel: {SegPersona.Telefono}");
+                    ListaSeg.Items.Add($"{SegPersona.Cognome}, {SegPersona.Nome},  {SegPersona.Telefono}");
                 }
             }
             else
@@ -159,7 +159,7 @@ namespace BdT_Vita
                 ListaPrest.Items.Clear();
                 foreach (Prestazione prestazione in prestazioniOrdinate)
                 {
-                    ListaPrest.Items.Add($"{prestazione.Giver.Cognome}, {prestazione.Giver.Nome} -> {prestazione.Reciver.Cognome}, {prestazione.Reciver.Nome} - {prestazione.Ore} ore di {prestazione.Tipo} il giorno {prestazione.Giorno}");
+                    ListaPrest.Items.Add($"{prestazione.Giver.Cognome}, {prestazione.Giver.Nome} -> {prestazione.Reciver.Cognome}, {prestazione.Reciver.Nome} / {prestazione.Ore} ore di {prestazione.Tipo} il giorno {prestazione.Giorno}");
                 }
             }
             else
@@ -181,7 +181,7 @@ namespace BdT_Vita
             {
                 if(debitor.Debito != 0)
                 {
-                    ListaDebiti.Items.Add($"{debitor.Cognome}, {debitor.Nome} | Debito: {debitor.Debito}");
+                    ListaDebiti.Items.Add($"{debitor.Cognome}, {debitor.Nome} | ==> {debitor.Debito}");
 
                 }
             }
