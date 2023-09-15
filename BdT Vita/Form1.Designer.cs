@@ -47,7 +47,7 @@
             this.btnSegreteria.Name = "btnSegreteria";
             this.btnSegreteria.Size = new System.Drawing.Size(143, 108);
             this.btnSegreteria.TabIndex = 0;
-            this.btnSegreteria.Text = "Segreteria";
+            this.btnSegreteria.Text = "Aggiorna Segreteria";
             this.btnSegreteria.UseVisualStyleBackColor = true;
             this.btnSegreteria.Click += new System.EventHandler(this.btnSegreteria_Click_1);
             // 
@@ -57,7 +57,7 @@
             this.btnOrdinaPrestazioni.Name = "btnOrdinaPrestazioni";
             this.btnOrdinaPrestazioni.Size = new System.Drawing.Size(143, 108);
             this.btnOrdinaPrestazioni.TabIndex = 1;
-            this.btnOrdinaPrestazioni.Text = "Prestazioni";
+            this.btnOrdinaPrestazioni.Text = "Aggiorna Prestazioni";
             this.btnOrdinaPrestazioni.UseVisualStyleBackColor = true;
             this.btnOrdinaPrestazioni.Click += new System.EventHandler(this.btnOrdinaPrestazioni_Click_1);
             // 
@@ -67,7 +67,7 @@
             this.btnDebito.Name = "btnDebito";
             this.btnDebito.Size = new System.Drawing.Size(143, 108);
             this.btnDebito.TabIndex = 2;
-            this.btnDebito.Text = "Debiti";
+            this.btnDebito.Text = "Aggiorna Debiti";
             this.btnDebito.UseVisualStyleBackColor = true;
             this.btnDebito.Click += new System.EventHandler(this.btnDebito_Click_1);
             // 
@@ -88,6 +88,7 @@
             this.ListaPrest.Name = "ListaPrest";
             this.ListaPrest.Size = new System.Drawing.Size(542, 100);
             this.ListaPrest.TabIndex = 5;
+            this.ListaPrest.SelectedIndexChanged += new System.EventHandler(this.ListaPrest_SelectedIndexChanged);
             // 
             // ListaDebiti
             // 
@@ -111,7 +112,7 @@
             // 
             // AddPersona
             // 
-            this.AddPersona.Location = new System.Drawing.Point(12, 473);
+            this.AddPersona.Location = new System.Drawing.Point(12, 388);
             this.AddPersona.Name = "AddPersona";
             this.AddPersona.Size = new System.Drawing.Size(592, 79);
             this.AddPersona.TabIndex = 8;
@@ -121,7 +122,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(610, 473);
+            this.button1.Location = new System.Drawing.Point(610, 388);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(590, 79);
             this.button1.TabIndex = 9;
@@ -131,7 +132,7 @@
             // 
             // EliminaPersona
             // 
-            this.EliminaPersona.Location = new System.Drawing.Point(12, 388);
+            this.EliminaPersona.Location = new System.Drawing.Point(12, 473);
             this.EliminaPersona.Name = "EliminaPersona";
             this.EliminaPersona.Size = new System.Drawing.Size(592, 79);
             this.EliminaPersona.TabIndex = 10;
@@ -141,7 +142,7 @@
             // 
             // EliminaPrestazione
             // 
-            this.EliminaPrestazione.Location = new System.Drawing.Point(610, 388);
+            this.EliminaPrestazione.Location = new System.Drawing.Point(610, 473);
             this.EliminaPrestazione.Name = "EliminaPrestazione";
             this.EliminaPrestazione.Size = new System.Drawing.Size(590, 79);
             this.EliminaPrestazione.TabIndex = 11;

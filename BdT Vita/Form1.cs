@@ -289,6 +289,11 @@ namespace BdT_Vita
 
         }
 
+        private void ListaPrest_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
         /*private Persona nuovaPersona;
 
